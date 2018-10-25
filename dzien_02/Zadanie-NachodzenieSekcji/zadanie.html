@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <title>Najeżdzanie na header, nav przypięty</title>
     <style>
+        :root {
+            --navHeight: 10vh;
+            --headerHeight: 90vh;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -20,25 +25,30 @@
 
         }
 
+
+        nav,
+        header {
+            position: fixed;
+        }
+
         nav {
             background-color: black;
-            height: 10vh;
+            height: var(--navHeight);
             width: 100%;
-            position: fixed;
             top: 0;
             left: 0;
             z-index: 1;
-            line-height: 10vh;
+            line-height: var(--navHeight);
         }
 
         header {
             background-color: brown;
-            height: 90vh;
+            height: var(--headerHeight);
             width: 100%;
-            position: fixed;
-            top: 10vh;
+            top: 0;
             left: 0;
-            line-height: 90vh;
+            margin-top: var(--navHeight);
+            line-height: var(--headerHeight);
         }
 
         main {
@@ -47,8 +57,7 @@
             height: 200vh;
             width: 100%;
             position: relative;
-            top: 100vh;
-            left: 0;
+            margin-top: calc(var(--navHeight) + var(--headerHeight));
             line-height: 200vh;
         }
     </style>
