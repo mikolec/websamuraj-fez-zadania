@@ -18,17 +18,21 @@
     <title>A dream about old Japan</title>
     <style>
         :root {
-            --pictureHeight: 40vh;
+            --pictureHeight: 60vh;
         }
 
         .picture {
-            position: relative;
+            /* position: relative; */
+            position: absolute;
             width: calc(var(--pictureHeight) * 16/9);
             height: var(--pictureHeight);
-            top: calc(50vh - var(--pictureHeight)/2);
-            margin: 0 auto;
+            /* top: calc(50vh - var(--pictureHeight)/2); */
+            top: calc(50% - var(--pictureHeight)/2);
+            /* margin: 0 auto; */
+            left: calc(50% - var(--pictureHeight) * 16/9 * 1/2);
             overflow: hidden;
             background-color: #c3c1c1;
+            z-index: -3;
         }
 
         .picture>img {
@@ -36,64 +40,67 @@
             width: 100%;
         }
 
+        /* img:nth-child(1) { - alternatywny zapis */
         img[src*="japan1.png"] {
-            top: 2vh;
+            /* % - odnoszą się tutaj do wysokości zawierającego elementu */
+            bottom: -5%;
             left: 0;
         }
 
         img[src*="japan2.png"] {
-            top: 8vh;
+            bottom: -18%;
             left: 0;
         }
 
         img[src*="japan3.png"] {
-            top: 13vh;
+            bottom: -28%;
             left: 0;
         }
 
         img[src*="japan4.png"] {
-            top: 12vh;
+            bottom: -26%;
             left: 0;
         }
 
         img[src*="japan5.png"] {
-            top: 16vh;
+            bottom: -36%;
             left: 0;
         }
 
         img[src*="japan6.png"] {
-            top: 26vh;
+            bottom: -62%;
             left: 0;
         }
 
         img[src*="japan7.png"] {
-            top: 0.5vh;
-            left: 4vh;
-            width: 7vh;
+            top: 4%;
+            left: 8%;
+            width: 7%;
+            z-index: -1;
         }
 
         img[src*="japan8.png"] {
-            top: 3vh;
-            left: -3vh;
-            width: 19vh;
+            top: 10%;
+            left: -5%;
+            width: 26%;
         }
 
         img[src*="japan9.png"] {
-            top: 2vh;
-            right: 0;
-            width: 30vh;
+            top: 6%;
+            right: 2%;
+            width: 36%;
         }
 
         img[src*="japan10.png"] {
-            top: 7vh;
+            top: 12%;
             right: 0;
-            width: 25vh;
+            width: 28%;
         }
 
         img[src*="japan11.png"] {
-            top: 22vh;
-            left: 5vh;
-            width: 5vh;
+            bottom: 20%;
+            left: 5%;
+            width: 5%;
         }
     </style>
 </head>
