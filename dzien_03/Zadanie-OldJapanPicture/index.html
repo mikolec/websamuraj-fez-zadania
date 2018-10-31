@@ -1,0 +1,119 @@
+<!-- 
+    Układ 16:9
+    Ma być podobny (nie pixel w pixel)
+    Ma być responsywny (dostosowoywać się do wysokości przeglądarki)
+
+    ZŁOTE ZASADY
+    - Zrób tak jak potrafisz i tyle ile potrafisz
+    - Próbuj/testuj/sprawdzaj co by było. Takie próbowanie to najważniejsze cechy programisty
+    - Nie przeskakuj ćwiczenia. 
+ -->
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A dream about old Japan</title>
+    <style>
+        :root {
+            --pictureHeight: 40vh;
+        }
+
+        .picture {
+            position: relative;
+            width: calc(var(--pictureHeight) * 16/9);
+            height: var(--pictureHeight);
+            top: calc(50vh - var(--pictureHeight)/2);
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #c3c1c1;
+        }
+
+        .picture>img {
+            position: absolute;
+            width: 100%;
+        }
+
+        img[src*="japan1.png"] {
+            top: 2vh;
+            left: 0;
+        }
+
+        img[src*="japan2.png"] {
+            top: 8vh;
+            left: 0;
+        }
+
+        img[src*="japan3.png"] {
+            top: 13vh;
+            left: 0;
+        }
+
+        img[src*="japan4.png"] {
+            top: 12vh;
+            left: 0;
+        }
+
+        img[src*="japan5.png"] {
+            top: 16vh;
+            left: 0;
+        }
+
+        img[src*="japan6.png"] {
+            top: 26vh;
+            left: 0;
+        }
+
+        img[src*="japan7.png"] {
+            top: 0.5vh;
+            left: 4vh;
+            width: 7vh;
+        }
+
+        img[src*="japan8.png"] {
+            top: 3vh;
+            left: -3vh;
+            width: 19vh;
+        }
+
+        img[src*="japan9.png"] {
+            top: 2vh;
+            right: 0;
+            width: 30vh;
+        }
+
+        img[src*="japan10.png"] {
+            top: 7vh;
+            right: 0;
+            width: 25vh;
+        }
+
+        img[src*="japan11.png"] {
+            top: 22vh;
+            left: 5vh;
+            width: 5vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="picture">
+        <!-- img[src=img/japan$.png]*11 -->
+        <img src="img/japan1.png" alt="">
+        <img src="img/japan2.png" alt="">
+        <img src="img/japan3.png" alt="">
+        <img src="img/japan4.png" alt="">
+        <img src="img/japan5.png" alt="">
+        <img src="img/japan6.png" alt="">
+        <img src="img/japan7.png" alt="">
+        <img src="img/japan8.png" alt="">
+        <img src="img/japan9.png" alt="">
+        <img src="img/japan10.png" alt="">
+        <img src="img/japan11.png" alt="">
+
+    </div>
+</body>
+
+</html>
