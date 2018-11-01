@@ -23,24 +23,34 @@ Tekst ma być pod szachownicą. Wykorzystaj do tego właściwości position rela
         box-sizing: border-box;
       }
       .board {
-        background-color: grey;
         border: 10px solid black;
-        position: absolute;
+        position: absolute; /*okno przeglądarki rodzicem*/
         width: 50%;
         height: 50vw;
+/*
         top: calc(50% - 50vw/2);
         left: calc(50% - 50%/2);
+*/
+        top: 50%;
+        left: 50%;
+        margin-top: -25vw;
+        margin-left: -25vw;
       }
       span {
         position: absolute;
+/*
         width: 50%;
         height: 50%;
+*/
       }
       span:nth-child(1){
         top: 0;
         left: 0;
+        bottom: 50%;
+        right: 50%;
         background-color: #f00;
       } 
+/*
       span:nth-child(2) {
         top: 0;
         right: 0;
@@ -51,15 +61,22 @@ Tekst ma być pod szachownicą. Wykorzystaj do tego właściwości position rela
         left: 0;
         background-color: #fff;
       }    
+*/
       span:nth-child(4) {
         bottom: 0;
         right: 0;
+        top: 50%;
+        left: 50%;
         background-color: #f00;
       }
       h1 {
         position: relative;
         text-align: center;
-        top: 85vw;
+        top: 90vw;
+        line-height: 10vh;
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 4vh;;
       }
     </style>
 </head>
