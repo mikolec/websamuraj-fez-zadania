@@ -1,10 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Menu</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      /* overflow: hidden; */
+    }
+
+    .wrap,
+    nav,
+    header {
+      height: 360px;
+    }
+
+    nav {
+      float: left;
+      width: 300px;
+    }
+
+    nav a {
+      display: block;
+      line-height: 72px;
+      font-size: 24px;
+      color: #333;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: arial, sans-serif;
+      padding: 0 5px 0 30px;
+    }
+
+    nav a i {
+      border-right: 2px solid #333;
+      margin-right: 20px;
+      /* elementy domyślnie są różnej wielkości */
+      width: 50px;
+      transition: .3s;
+    }
+
+    nav a:hover i {
+      margin-right: 40px;
+      color: orange;
+    }
+
+    header {
+      float: left;
+      width: calc(100% - 300px);
+      background-color: #666;
+      background-image: url("./pianino.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    section {
+      margin-top: 50px;
+    }
+
+    section h1 {
+      font-size: 40px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #333;
+      font-family: arial, sans-serif;
+      text-align: center;
+      line-height: 1.5em;
+      padding: 15px 0;
+    }
+
+    @media (max-width: 1024px) {
+
+      nav {
+        background-color: #444;
+        position: fixed;
+        width: 72px;
+        height: 100%;
+      }
+
+      nav a {
+        display: block;
+        padding: inherit;
+        text-align: center;
+        line-height: 20vh;
+        font-size: 30px;
+      }
+
+      nav a span {
+        display: none;
+      }
+
+      nav a i {
+        color: #fff;
+        border: none;
+        margin-right: 0;
+      }
+
+      nav a:hover i {
+        margin-right: 0;
+      }
+
+      header {
+        width: 100%;
+        margin-left: 72px;
+      }
+
+      section {
+        margin-left: 72px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  
+  <div class="wrap">
+    <nav>
+      <a href="#"><i class="far fa-play-circle"></i><span>start</span></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i><span>oferta</span></a>
+      <a href="#"><i class="fas fa-rss"></i><span>blog</span></a>
+      <a href="#"><i class="far fa-calendar-alt"></i><span>terminarz</span></a>
+      <a href="#"><i class="far fa-envelope"></i><span>kontakt</span></a>
+    </nav>
+    <header>
+
+    </header>
+  </div>
+  <section>
+    <h1>Witaj w naszym świecie!</h1>
+  </section>
 </body>
+
 </html>
