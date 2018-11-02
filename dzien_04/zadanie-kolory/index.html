@@ -58,7 +58,9 @@
             margin: 5vw;
             border: 3px solid white;
             border-radius: 50%;
+            /* tekst przesłania elementy, więc circle trzeba podnieść wyżej */
             z-index: 1;
+            cursor: pointer;
         }
 
         .circle.red {
@@ -66,17 +68,11 @@
             left: 0;
         }
 
-        .circle.red:hover~.bg p.red {
-            opacity: 1;
-        }
+
 
         .circle.green {
             top: 0;
             right: 0;
-        }
-
-        .circle.green:hover~.bg p.green {
-            opacity: 1;
         }
 
         .circle.blue {
@@ -84,15 +80,15 @@
             left: 0;
         }
 
-        .circle.blue:hover~.bg p.blue {
-            opacity: 1;
-        }
 
         .circle.orange {
             bottom: 0;
             right: 0;
         }
 
+        .circle.red:hover~.bg p.red,
+        .circle.green:hover~.bg p.green,
+        .circle.blue:hover~.bg p.blue,
         .circle.orange:hover~.bg p.orange {
             opacity: 1;
         }
