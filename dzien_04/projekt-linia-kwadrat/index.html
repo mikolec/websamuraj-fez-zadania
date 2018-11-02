@@ -17,7 +17,9 @@
             height: 10vw;
             border: 2px solid black;
             position: absolute;
-            top: 100vh;
+            /* top: calc(100% - 5vw - 2px);
+            left: calc(50% - 5vw - 2px); */
+            top: 100%;
             left: 50%;
             transform: translate(-50%, -50%) rotate(45deg);
             z-index: 1;
@@ -27,8 +29,8 @@
         .line {
             border-top: 8px dashed black;
             position: absolute;
-            /* top: calc(100vh - 4px); */
-            top: 100vh;
+            /* top: calc(100% - 4px); */
+            top: 100%;
             transform: translateY(-50%);
             left: 0;
             width: 100%;
