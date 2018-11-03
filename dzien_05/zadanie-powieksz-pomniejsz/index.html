@@ -5,15 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Powiększ Pomniejsz</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         button {
             font-size: 40px;
+            padding: 5px 10px;
         }
 
         h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-family: arial;
             font-size: 80px;
+            margin: 0 auto;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .larger:hover~h1 {
+            transform: translate(-50%, -50%) scale(2);
+        }
+
+        .smaller:hover~h1 {
+            transform: translate(-50%, -50%) scale(.5);
+        }
+
+        .border:hover~h1 {
+            border: 20px solid black;
         }
     </style>
 </head>
