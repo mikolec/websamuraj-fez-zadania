@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Przełączniki</title>
+    <style>
+        /* label {
+            margin-right: 2em;
+        } */
+        /* input[type="checkbox"] { */
+        input[type=checkbox] {
+            padding: 1em;
+            border: 1px solid #000;
+            background-color: #f00;
+            color: green;
+            margin-right: 2em;
+        }
+        .box {
+            position: absolute;
+            top: calc(50% - 10vh);
+            left: calc(50% - 10vh);
+            width: 20vh;
+            height: 20vh;
+            border: 1px solid brown;
+            transition: 1s;
+        }
+
+        input[name="2x"]:checked~.box {
+            top: calc(50% - 20vh);
+            left: calc(50% - 20vh);
+            width: 40vh;
+            height: 40vh;
+            border: 2px solid brown;
+        }
+        input[name="45deg"]:checked~.box {
+            transform: rotate(45deg);
+        }
+        input[name="black"]:checked~.box {
+            background-color: #000;
+        }
+        input[name="light"]:checked~.box {
+            box-shadow: 0 0 10px 4px #f00;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <label for="2x">2xWielkość</label>
+    <input type="checkbox" name="2x" id="cb2x">
+    <label>Obrót o 45deg</label>
+    <input type="checkbox" name="45deg" id="cb45deg">
+    <label>Czarny</label>
+    <input type="checkbox" name="black" id="cbBlack">
+    <label>Światło</label>
+    <input type="checkbox" name="light" id="cbLight">
+    <div class="box"></div>
+</body>
+
+</html>
