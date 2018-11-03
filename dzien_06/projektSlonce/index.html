@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Słońce</title>
+    <style>
+        body {
+            background-color: #15f;
+            animation: sky 5s infinite linear;
+        }
+
+        .sun {
+            position: absolute;
+            bottom: 5vh;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            width: 15vh;
+            height: 15vh;
+            background-color: darkred;
+            border-radius: 50%;
+            animation: sun 5s linear infinite;
+        }
+
+        .grass {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30vh;
+            background-color: green;
+            animation: grass 5s linear infinite;
+        }
+
+        @keyframes sky {
+            0% {
+                background-color: rgb(3, 25, 80);
+            }
+
+            20% {
+                background-color: rgb(230, 150, 31);
+            }
+
+            50% {
+                background-color: rgb(46, 191, 253);
+            }
+
+            80% {
+                background-color: rgb(32, 82, 219);
+            }
+
+            100% {
+                background-color: rgb(3, 25, 80);
+            }
+        }
+
+        @keyframes grass {
+            0% {
+                background-color: darkgreen;
+            }
+
+            20% {
+                background-color: green;
+            }
+
+            50% {
+                background-color: lightgreen;
+            }
+
+            80% {
+                background-color: green;
+            }
+
+            100% {
+                background-color: darkgreen;
+            }
+        }
+
+        @keyframes sun {
+            0% {
+                bottom: 5vh;
+                left: 10%;
+            }
+
+            50% {
+                bottom: 70vh;
+                background-color: yellow;
+            }
+
+            100% {
+                bottom: 5vh;
+                left: 90%;
+            }
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="grass"></div>
+</body>
+
+</html>
