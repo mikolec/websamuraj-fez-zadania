@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Przyciski</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            margin: 10vh auto;
+            width: 100%;
+        }
+
+        button {
+            background-color: #fff;
+            border: none;
+            font-family: arial;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 0.5em 1em;
+            margin-left: 15vw;
+            cursor: pointer;
+        }
+
+        .btn1 {
+            position: relative;
+        }
+
+
+        .btn1 span {
+            position: absolute;
+            bottom: 0;
+            left: 1em;
+            width: 0;
+            height: 3px;
+            background-color: #000;
+            transition: width .3s;
+        }
+
+        .btn1:hover span {
+            width: calc(100% - 2em);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <button class="btn1">przycisk <span></span> </button>
+        <button class="btn2">przycisk</button>
+        <button class="btn3">przycisk</button>
+    </div>
+</body>
+
+</html>
