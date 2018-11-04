@@ -24,34 +24,36 @@
             font-size: 40px;
             text-transform: uppercase;
             font-family: roboto condensed;
-            overflow: hidden;
+            /* overflow: hidden; */
             cursor: pointer;
         }
 
         button span {
             display: block;
-            background-color: #fcd;
             line-height: 100px;
-            position: absolute;
+            /* position: absolute; */
+            position: relative;
             top: 0;
+            /*domyślni left: auto - któe nie jest animowane! ważne ustawienei tego w animacji! */
             left: 0;
             width: 100%;
             transition: .2s linear;
         }
 
         button span+span {
-            top: 0;
+            /* top: 0; */
+            top: -100px;
             left: 100%;
         }
 
         button:hover span {
-            /* left: -100%; */
-            transform: translateX(-100%);
+            left: -100%;
+            /* transform: translateX(-100%); */
         }
 
-        /* button:hover span+span {
+        button:hover span+span {
             left: 0;
-        } */
+        }
     </style>
 </head>
 
