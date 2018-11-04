@@ -29,22 +29,24 @@
             cursor: pointer;
         }
 
-        span {
-            position: absolute;
-            top: 0;
+        button span {
+            display: block;
+            position: relative;
+            /* position: absolute; */
+            top: 0px;
             left: 0;
-            width: 100%;
-            height: 100%;
+            /* width: 100%; */
             line-height: 100px;
-            transition: transform 1s;
+            transition: all 1s;
         }
 
-        span+span {
+        /* button span+span {
             top: 100%;
-        }
+        } */
 
         button:hover span {
             transform: translateY(-100%);
+            /* top: -100px; */
         }
     </style>
 </head>
