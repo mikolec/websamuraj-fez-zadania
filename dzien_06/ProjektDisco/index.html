@@ -1,0 +1,96 @@
+<!-- Animacja trwa 1 sekundę z wyjątkiem ostatniego elementu w którym trwa 3 sekund (ta sama animacja, ale dłuższa) -->
+<!-- ostatni element ma odwrócony kierunek (reverse) -->
+<!-- Kolory elementów: lewy górny róg: czarny, prawy górny róg: czerwony, prawy dolny róg: zielony i lewy dolny róg: niebieski -->
+<!-- Zrób tylko jedną animację (keyframes) -->
+<!-- Opóźnienie .2s (kaażdy kolejny element) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            height: 30px;
+            width: 30px;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: disco 1s linear infinite;
+        }
+
+        div:nth-of-type(1) {
+            animation-delay: 0s;
+        }
+
+        div:nth-of-type(2) {
+            animation-delay: .2s;
+        }
+
+        div:nth-of-type(3) {
+            animation-delay: .4s;
+        }
+
+        div:nth-of-type(4) {
+            animation-delay: .6s;
+        }
+
+        div:nth-of-type(5) {
+            animation-delay: .8s;
+        }
+
+        div:nth-of-type(6) {
+            animation-delay: .10s;
+            animation-direction: reverse;
+            animation-duration: 3s;
+        }
+
+
+        @keyframes disco {
+            0% {
+                background-color: black;
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                background-color: red;
+                top: 0;
+                left: calc(100vw - 30px);
+            }
+
+            50% {
+                background-color: green;
+                top: calc(100vh - 30px);
+                left: calc(100vw - 30px);
+            }
+
+            75% {
+                background-color: blue;
+                top: calc(100vh - 30px);
+                left: 0;
+            }
+
+            100% {
+                background-color: black;
+                top: 0;
+                left: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</body>
+
+</html>
