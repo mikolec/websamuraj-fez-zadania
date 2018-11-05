@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>dots - spans</title>
+  <style>
+    p {
+      position: absolute;
+      font-size: 80px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*      overflow: hidden;*/
+    }
+
+
+
+    span {
+      animation: dot1 3s infinite;
+    }
+
+    span:nth-of-type(2) {
+      animation-name: dot2;
+    }
+
+    span:nth-of-type(3) {
+      animation-name: dot3;
+    }
+
+
+
+    @keyframes dot1 {
+      0% {
+        opacity: 0;
+      }
+
+      12% {
+        opacity: 0;
+      }
+
+      13% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes dot2 {
+      0% {
+        opacity: 0;
+      }
+
+      32% {
+        opacity: 0;
+      }
+
+      33% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes dot3 {
+      0% {
+        opacity: 0;
+      }
+
+      52% {
+        opacity: 0;
+      }
+
+      53% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--  p{Napis}>span{ .}*3-->
+  <p>Napis
+    <span> .</span>
+    <span> .</span>
+    <span> .</span>
+  </p>
+</body>
+</html>
