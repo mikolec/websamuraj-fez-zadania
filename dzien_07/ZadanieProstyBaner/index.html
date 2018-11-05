@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      animation: imagefade1 6s infinite;
+    }
+
+    img+img {
+      opacity: 0;
+      animation-name: imagefade2;
+/*      animation-delay: 2s;*/
+    }
+
+    @keyframes imagefade1 {
+      0% {
+        opacity: 1;
+      }
+
+      40% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      90% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+    
+        @keyframes imagefade2 {
+      0% {
+        opacity: 0;
+      }
+
+      40% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="img1.jpg" alt="">
+  <img src="img2.jpg" alt="">
+</body>
+
+</html>
