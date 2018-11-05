@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Strzelnica</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: radial-gradient(rgb(0, 0, 0) 4%, rgb(255, 0, 0) 4%, rgb(255, 0, 0) 10%, rgb(0, 255, 0) 10%, rgb(0, 255, 0) 18%, rgb(255, 255, 255) 18%);
+      overflow: hidden;
+    }
+
+    div {
+      position: absolute;
+      width: 4vw;
+      height: 4vw;
+      background-color: grey;
+      animation: move 3s infinite alternate, chaos 1.5s infinite alternate;
+    }
+
+    button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      font-family: arial;
+      font-size: 40px;
+    }
+
+    button:hover~div {
+      animation-play-state: paused;
+    }
+
+    @keyframes move {
+      0% {
+        left: 20%;
+        top: 20%;
+      }
+
+      10% {
+        left: 90%;
+        top: 12%;
+      }
+
+      20% {
+        left: 10%;
+        top: 27%;
+      }
+
+      30% {
+        left: 80%;
+        top: 37%;
+      }
+
+      40% {
+        left: 20%;
+        top: 43%;
+      }
+
+      50% {
+        left: 50%;
+        top: 50%;
+      }
+
+      60% {
+        left: 87%;
+        top: 63%;
+      }
+
+      70% {
+        left: 23%;
+        top: 76%;
+      }
+
+      80% {
+        left: 60%;
+        top: 81%;
+      }
+
+      90% {
+        left: 20%;
+        top: 92%;
+      }
+
+      100% {
+        left: 80%;
+        top: 80%;
+      }
+    }
+
+    @keyframes chaos {
+      0% {
+        transform: translate(-10vh, -10vw);
+      }
+
+      20% {
+        transform: translate(10vh, -10vw);
+      }
+
+      40% {
+        transform: translate(-10vh, 10vw);
+      }
+
+      60% {
+        transform: translate(20vh, -10vw);
+      }
+
+      60% {
+        transform: translate(-10vh, -30vw);
+      }
+
+      100% {
+        transform: translate(10vh, 10vw);
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <button>Stop!</button>
+  <div></div>
+</body>
+
+</html>
