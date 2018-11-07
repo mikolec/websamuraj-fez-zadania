@@ -10,45 +10,62 @@
         crossorigin="anonymous">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         .arrow {
+            /* przycisk domyślnie ma: box-sizing: border-box; oraz padding 1px 6px */
             width: 80px;
             height: 80px;
-            position: fixed;
+            position: absolute;
             bottom: 4vh;
-            left: 50%;
+            left: calc(50% - 40px);
             border: none;
             background-color: dodgerblue;
             border-radius: 50%;
             color: white;
             font-size: 60px;
             cursor: pointer;
+            border-style: none;
+            overflow: hidden;
+        }
+
+        .arrow:hover {
+            background-color: white;
         }
 
         .arrow i {
-            text-shadow: 0 18px white, 0 36px white;
-            position: absolute;
+            text-shadow: 0 -20px 0 white, 0 20px 0 white;
+            /* position: absolute;
             left: 0;
             right: 0;
-            top: 0;
+            top: 0; */
             width: 100%;
             height: 100%;
-            animation: arrow 1.5s infinite linear;
+            transform: translateY(0);
+            animation: arrow 3s infinite linear;
+
         }
 
         .arrow:hover i {
             animation: none;
+            /* animation-duration: 2s; */
             color: dodgerblue;
-            text-shadow: 0 18px blue, 0 36px darkblue;
+            text-shadow: 0 -20px 0 dodgerblue, 0 20px 0 dodgerblue;
             background-color: white;
         }
 
         @keyframes arrow {
             0% {
-                top: -100%;
+                /* top: -100%; */
+                transform: translateY(-120%);
             }
 
             100% {
-                top: 100%;
+                /* top: 100%; */
+                transform: translateY(120%);
             }
         }
     </style>
