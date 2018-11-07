@@ -120,7 +120,7 @@
       }
 
       60% {
-        top: 75px;
+        top: 80px;
         left: 75px;
       }
 
@@ -136,11 +136,71 @@
       }
     }
 
-    @keyframes playerPaddle {}
+    @keyframes playerPaddle {
 
-    @keyframes aiPaddle {}
+      /* 50% - 80px / 2 => 380px/2 - 80px/2*/
+      0% {
+        /* top: calc(50% - var(--paddleHeight)/2);  */
+        top: 150px;
+      }
 
-    @keyframes showResult {}
+      20% {
+        /* top: calc(50% - var(--paddleHeight)/2 + 40px); */
+        top: 200px;
+      }
+
+      40% {
+        top: 300px;
+      }
+
+      60% {
+        top: 40px;
+      }
+
+      80% {
+        top: 80px;
+      }
+
+      100% {
+        top: 80px;
+      }
+    }
+
+    @keyframes aiPaddle {
+      0% {
+        top: calc(50% - var(--paddleHeight)/2);
+      }
+
+      20% {
+        top: 260px;
+      }
+
+      40% {
+        top: 320px;
+      }
+
+      60% {
+        top: 260px;
+      }
+
+      80% {
+        top: 120px;
+      }
+
+      100% {
+        top: 80px;
+      }
+    }
+
+    @keyframes showResult {
+      from {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
 
