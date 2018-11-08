@@ -10,16 +10,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Szachownica FlexBox</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
+            /* justify-content: center;
+            align-items: center; */
             height: 100vh;
-            margin: 0;
         }
 
         section {
+            /* We flexboxie możemy użyć margin: auto auto; */
+            margin: auto;
             display: flex;
             flex-wrap: wrap;
             width: 50vh;
@@ -27,8 +32,9 @@
         }
 
         div {
-            width: 10vh;
-            height: 10vh;
+            /* width: 20%;
+            height: 20%; */
+            flex-basis: 20%;
         }
 
         div:nth-child(even) {
