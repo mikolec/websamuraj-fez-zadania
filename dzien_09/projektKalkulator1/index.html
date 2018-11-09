@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .result {
+            background-color: lightgray;
+            border: 3px solid cyan;
+            width: 50vw;
+            height: 10vh;
+        }
+
+        .panel {
+            background-color: #fcc;
+            width: 50vw;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div {
+            height: 10vh;
+            min-width: 33.3%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #000;
+            font-family: arial;
+            font-size: 2em;
+            color: #fff;
+            background-color: deepskyblue;
+        }
+
+        div:nth-last-of-type(1),
+        div:nth-last-of-type(2) {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="result"></section>
+    <section class="panel">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>+</div>
+        <div>0</div>
+        <div>-</div>
+        <div>/</div>
+        <div>.</div>
+        <div>*</div>
+        <div>C</div>
+        <div>=</div>
+    </section>
+</body>
+
+</html>
