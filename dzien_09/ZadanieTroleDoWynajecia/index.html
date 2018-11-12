@@ -9,73 +9,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <title>Cennik - wieczory panieńskie</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
+        }
+
+        html {
+            /* Podstawowe zachowania elementów */
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
         }
 
         h1 {
-            text-align: center;
-            font-family: sans-serif;
+            margin: 30px 0;
             text-transform: uppercase;
-            padding: 20px;
         }
 
-        img {
-            width: 80%;
-            height: auto;
-        }
+
 
         section {
             display: flex;
             justify-content: space-around;
-            max-width: 1000px;
-            margin: auto;
+            /* domyślnie elementy będą zajmować całą dostępną szerokość - kolumny mają taką samą wysokość*/
+            /* align-items: stretch; */
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .col {
-            flex-basis: 30%;
+            /* fb dotyczy contentu, chyba, że border-box */
+            flex-basis: 25%;
             background-color: #ddd;
+            padding: 1.2em;
+            /* kontener */
             display: flex;
             flex-direction: column;
-            align-items: center;
-            padding: 1.8em 1em;
+            /* centrowanie przydatne np, gdy elementy mają ręcznie ustawioną szerokość np. jeśli img - width: 50% */
+            /* align-items: center; */
+            /* u nas przydatne, jeśli chcemy np span z dutkami rozciągnąć na szerokość */
+            align-items: stretch;
         }
 
+        .col img {
+            /* 100% - rodzica, czyli kolumny .col */
+            width: 80%;
+            /* domyślnie align-self ma wartość auto i pobiera a align-items rodzica. W przypadku, gdy chcemy zapobiec ustawianiu się z lewej przy domyślnym stretch, możemy zmienić to zachowanie */
+            align-self: center;
+        }
+
+        /* .col>* {
+            padding-bottom: 35px;
+        } */
+
         .col h2 {
-            font-family: sans-serif;
             font-size: 2em;
             padding: .2em 0 1.4em;
         }
 
         .col p {
-            font-family: sans-serif;
             font-size: 1.2em;
             margin: 1em 0;
         }
 
-        .price {
+        .col .price {
             flex-grow: 1;
-            width: 100%;
+            /* kontener dla spana */
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            align-items: center;
         }
 
-        .price span {
-            display: block;
+        .col .price span {
             background-color: #fff;
-            width: 100%;
-            line-height: 3em;
-            text-align: center;
+            padding: 1em 0;
+            /* width: 100%; - niepotrzebne, bo jest ustawiony stretch na kontenerze*/
             border: 2px solid #000;
         }
 
-        .price span:hover {
+        .col .price span:hover {
             background-color: #000;
             color: #fff;
         }
