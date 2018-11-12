@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--  warunek konieczny obsłużenia skalowania na komórkach -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      background-color: beige;
+      height: 100vh;
+      justify-content: center;
+      /*      background-image: url("img/bg1920x1280.jpg");*/
+      background-size: cover;
+      background-position: center;
+    }
+
+    div {
+      background-color: rgba(255, 0, 0, 0.5);
+      flex-basis: 25%;
+    }
+
+    /*w celu optymalizacji ważne jest, żeby obrazki wczytywały się tylko jednokrotnie - zwłaszcza dla mobilek!*/
+    @media (max-width: 640px) {
+      body {
+        background-image: url("img/bg640x426.jpg");
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 1280px) {
+      body {
+        background-image: url("img/bg1280x853.jpg");
+      }
+    }
+
+    @media (min-width: 1281px) {
+      body {
+        background-image: url("img/bg1920x1280.jpg");
+      }
+    }
+
+
+    @media screen and (min-width: 641px) {
+      body {
+        background-color: rebeccapurple;
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      body {
+        background-color: goldenrod;
+      }
+    }
+
+    /*dla orientacji typu portret - często będziemy zamieniać kierunek osi głównej flex*/
+    @media screen and (orientation: portrait) {
+      body {
+        flex-direction: column;
+      }
+
+      div {
+        flex-basis: 50%;
+      }
+    }
+
+    @media screen and (orientation: landscape) and (max-height:200px) {
+
+      div {
+        background-color: #fff;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: "open sans", arial, sans-serif;
+      font-size: 1.2em;
+      color: #fff;
+      text-transform: uppercase;
+      /*      max-width: 624px;*/
+      /*      minimalna wysokość strony*/
+      min-height: 100vh;
+      /*      margin: 0 auto;*/
+      align-items: center;
+    }
+
+    nav {
+      align-self: stretch;
+      background-color: #333;
+      flex-basis: 8vh;
+      padding: 3vh 0;
+    }
+
+    header {
+      background-color: #daa;
+      /*      % nie dzaiłają na min-height: */
+      flex-basis: 20vh;
+      width: 100%;
+      /*      align-self: auto;*/
+      max-width: 600px;
+    }
+
+    section {
+      flex-grow: 1;
+      display: flex;
+      width: 100%;
+      max-width: 600px;
+      /*      align-items: stretch;*/
+    }
+
+    main {
+      background-color: #bbb;
+      /*      flex-basis: 80%;*/
+      flex-grow: 1;
+    }
+
+    aside {
+      background-color: #999;
+      flex-basis: 20%;
+      min-width: 200px;
+    }
+
+    footer {
+      background-color: #333;
+      flex-basis: 2vh;
+      align-self: stretch;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        order: -1;
+      }
+
+      /*      1' sposób:*/
+      /*
+
+      section {
+        flex-wrap: wrap;
+      }
+
+      aside {
+        flex-basis: 100%;
+      }
+*/
+
+      section {
+        flex-direction: column;
+
+      }
+
+      main {
+        flex-grow: 2;
+/*        flex-basis: 100%;*/
+      }
+
+      aside {
+        flex-grow: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>Nawigacja</nav>
+  <header>Nagłówek</header>
+  <section>
+    <main>Główna treść</main>
+    <aside>Kolumna</aside>
+  </section>
+  <footer>Stopka</footer>
+</body>
+</html>

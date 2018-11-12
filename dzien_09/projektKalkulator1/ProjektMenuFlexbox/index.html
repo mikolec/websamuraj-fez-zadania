@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Flexbox</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav a {
+      display: block;
+      background-color: #aaa;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: arial;
+      color: #fff;
+      flex-basis: 100%;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    @media screen and (min-width: 824px) {
+
+      nav {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      nav a {
+        margin: 15px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#">przycisk 1</a>
+    <a href="#">przycisk 2</a>
+    <a href="#">przycisk 3</a>
+    <a href="#">przycisk 4</a>
+    <a href="#">przycisk 5</a>
+  </nav>
+</body>
+</html>
