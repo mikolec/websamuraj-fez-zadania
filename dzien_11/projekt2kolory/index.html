@@ -30,16 +30,17 @@
     <div class="s2"></div>
 
     <script>
-        const s1 = document.querySelector('.s1'),
-            s2 = document.querySelector('.s2');
+        const leftDiv = document.querySelector('.s1'),
+            rightDiv = document.querySelector('.s2');
 
-        function classToggle() {
-            s1.classList.toggle('red');
-            s2.classList.toggle('red');
+        function changeColor() {
+            // leftDiv.classList.toggle('red');
+            // rightDiv.classList.toggle('red');
+            this.classList.toggle('red');
         }
 
-        s1.addEventListener('click', classToggle);
-        s2.addEventListener('click', classToggle);
+        leftDiv.addEventListener('click', changeColor);
+        rightDiv.addEventListener('click', changeColor);
     </script>
 
 </body>
