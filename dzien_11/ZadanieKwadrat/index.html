@@ -22,7 +22,11 @@
             position: fixed;
             top: calc(50% - 50px);
             left: calc(50% - 50px);
-            /* transition: .5s; */
+
+        }
+
+        .transition {
+            transition: .5s;
         }
     </style>
 </head>
@@ -33,8 +37,8 @@
 
     <script>
         // parametry główne. Za pomocą zmiennych stwórz początkową wartość rotate (zero) i wartość o którą będziesz zmieniał stopnie (o 10 stopnii).
-        let rotation = 0,
-            angle = 30;
+        let rotation = 0;
+        const angle = 30;
 
 
         // pobieramy elementy - pobierz przycisk i div
@@ -52,7 +56,8 @@
 
 
         //Bonus dodaj właściwość transition dla div określoną na .5s.
-        square.style.transition = '.5s';
+        // square.style.transition = '.5s';
+        square.classList.add('transition');
     </script>
 </body>
 
