@@ -5,13 +5,10 @@
   <title>Counter</title>
   <style>
     body {
-      /*
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-*/
-      line-height: 100vh;
       text-align: center;
       margin: 0;
       cursor: pointer;
@@ -24,13 +21,20 @@
 </head>
 
 <body>
-  Liczba kliknięć: <span class="counter">0</span>
+  <button id="btn-plus">+</button>
+  <button id="btn-minus">-</button>
+  Liczba +/-: <span class="counter">0</span>
   <script>
     const spanCounter = document.querySelector('span.counter');
+    const btnAdd = document.getElementById('btn-plus'),
+      btnSubtract = document.getElementById('btn-minus');
     let counter = 0;
-    //window
-    document.body.addEventListener('click', function() {
+
+    btnAdd.addEventListener('click', function() {
       spanCounter.textContent = ++counter;
+    });
+    btnSubtract.addEventListener('click', function() {
+      spanCounter.textContent = --counter;
     });
   </script>
 </body>
