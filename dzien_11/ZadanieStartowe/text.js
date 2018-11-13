@@ -1,21 +1,16 @@
 const smallerBtn = document.querySelector('.smaller'),
     biggerBtn = document.querySelector('.bigger'),
-    pText = document.querySelector('p');
+    p = document.querySelector('p');
 
-// let fontSize = pText.style.fontSize; // jak jest określone z domyślnych fontów to pusta wartość
-let computedFontSize = window.getComputedStyle(pText).fontSize;
-let fontSizeNum = parseInt(computedFontSize);
-
-function newFontSizeStr(n) {
-    return (fontSizeNum += n) + 'px';
-}
+let computedFontSize = window.getComputedStyle(p).fontSize;
+let textSize = parseInt(computedFontSize);
 
 function setBiggerFontSize() {
-    pText.style.fontSize = newFontSizeStr(+1);
+    p.style.fontSize = (++textSize) + 'px';
 }
 
 function setSmallerFontSize() {
-    pText.style.fontSize = newFontSizeStr(-1);
+    p.style.fontSize = (--textSize) + 'px';
 }
 
 smallerBtn.addEventListener('click', setSmallerFontSize);
