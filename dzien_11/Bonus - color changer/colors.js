@@ -1,10 +1,7 @@
 const divs = document.querySelectorAll('div');
 
-function addListener(div) {
+divs.forEach(function (div) {
     div.addEventListener('click', function () {
-        document.body.className = "";
-        document.body.classList.add(this.className);
+        document.body.className = this.className;
     });
-}
-
-divs.forEach(addListener);
+});
