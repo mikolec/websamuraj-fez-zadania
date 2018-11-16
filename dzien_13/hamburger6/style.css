@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+p {
+    margin: 10px 80px;
+    line-height: 2em;
+}
+
+.burger {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    font-size: 2em;
+    color: #666;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.burger .fas {
+    display: none;
+}
+
+.burger .show {
+    display: block;
+}
+
+nav {
+    position: fixed;
+    top: -40vh;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+    background-color: #000;
+    transition: .5s;
+}
+
+nav.show {
+    top: 0;
+}
