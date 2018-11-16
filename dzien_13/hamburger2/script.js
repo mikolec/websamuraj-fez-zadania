@@ -1,6 +1,5 @@
-const burgerBtn = document.querySelector('.burger'),
-    menu = document.querySelector('aside');
+const burgerBtn = document.querySelector('.burger');
 
 burgerBtn.addEventListener('click', function () {
-    menu.classList.toggle('show');
+    this.classList.toggle('active');
 });
