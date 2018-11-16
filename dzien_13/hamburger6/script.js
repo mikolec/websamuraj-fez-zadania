@@ -1,3 +1,3 @@
 $('.burger').on('click', function () {
-    $('.fas, nav').toggleClass('show');
+    $('.fas, nav').toggleClass('off');
 });

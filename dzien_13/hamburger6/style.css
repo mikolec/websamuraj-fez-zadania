@@ -4,7 +4,7 @@
 }
 
 
-p {
+.wrapper {
     margin: 10px 80px;
     line-height: 2em;
 }
@@ -14,31 +14,32 @@ p {
     top: 40px;
     right: 40px;
     font-size: 2em;
-    color: #666;
+    color: #000;
+    z-index: 1;
 }
 
 .burger:hover {
     cursor: pointer;
 }
 
-.burger .fas {
+i.off {
     display: none;
 }
 
-.burger .show {
-    display: block;
+i.fa-angle-up {
+    color: white;
 }
 
 nav {
     position: fixed;
-    top: -40vh;
+    top: 0;
     left: 0;
-    width: 100vw;
+    right: 0;
     height: 40vh;
     background-color: #000;
     transition: .5s;
 }
 
-nav.show {
-    top: 0;
+nav.off {
+    top: -40vh;
 }
