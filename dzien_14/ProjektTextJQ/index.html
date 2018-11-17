@@ -57,15 +57,16 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        $(document).on('scroll', function () {
-            const $this = $(this),
-                s1Top = $('.sekcja1').offset().top,
-                s2Top = $('.sekcja2').offset().top,
-                s3Top = $('.sekcja3').offset().top,
-                s4Top = $('.sekcja4').offset().top,
-                $info = $('.info');
+        const s1Top = $('.sekcja1').offset().top,
+            s2Top = $('.sekcja2').offset().top,
+            s3Top = $('.sekcja3').offset().top,
+            s4Top = $('.sekcja4').offset().top,
+            $info = $('.info');
 
-            let scrollTop = $this.scrollTop();
+
+        $(document).on('scroll', function () {
+
+            let scrollTop = $(this).scrollTop();
 
             if (scrollTop >= s1Top && scrollTop < s2Top) {
                 $info.text('SEKCJA 1');
