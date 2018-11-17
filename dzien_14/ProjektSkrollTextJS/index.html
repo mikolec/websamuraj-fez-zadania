@@ -55,7 +55,13 @@
     <div class="info">WITAJ NA STRONIE</div>
 
     <script>
-        //const wysokoscSekcji1 = document.querySelector('.sekcja1').clientHeight;
+        // .offsetHeight - z paddingiem i borderem
+        // .clientHeight - bez paddingu i bordera
+        // const s1Height = document.querySelector('.sekcja1').clientHeight,
+        //     s2Height = document.querySelector('.sekcja2').clientHeight,
+        //     s3Height = document.querySelector('.sekcja3').clientHeight,
+        //     s4Height = document.querySelector('.sekcja4').clientHeight;
+
         const s1Top = document.querySelector('.sekcja1').offsetTop,
             s2Top = document.querySelector('.sekcja2').offsetTop,
             s3Top = document.querySelector('.sekcja3').offsetTop,
@@ -66,6 +72,7 @@
 
             const scrollTop = this.scrollY;
 
+            // if (scrollTop < s1Top + s1Height) { tożsame wartości, a mniej działań
             if (scrollTop < s2Top) {
                 info.textContent = 'SEKCJA 1';
             } else
