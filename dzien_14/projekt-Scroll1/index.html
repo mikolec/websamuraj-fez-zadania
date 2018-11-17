@@ -46,6 +46,10 @@
             bottom: -75px;
             transition: .8s;
         }
+
+        .info.active {
+            bottom: 0;
+        }
     </style>
 </head>
 <!-- zmiana tekstów zrobić -->
@@ -61,16 +65,17 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         $(document).on('scroll', function () {
+            const $this = $(this),
+                $info = $('.info');
 
-            if ($(document).scrollTop() > 300) {
-                $('.info').css("bottom", "0");
-                let str = "Obecna pozycja scroll, to: " + $(document).scrollTop();
-                $('.info').text(str);
+            if ($this.scrollTop() > 300) {
+                $info.addClass('active');
             } else {
-                $('.info').css("bottom", "-75px");
+                $info.removeClass('active');
             }
-
-
+            // let str = "Obecna pozycja scroll, to: " + Math.round($this.scrollTop());
+            let str = "Obecna pozycja scroll, to: " + $this.scrollTop().toFixed() + "px";
+            $info.text(str);
         });
     </script>
 </body>
