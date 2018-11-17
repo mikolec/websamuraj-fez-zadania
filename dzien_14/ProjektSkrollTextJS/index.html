@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skrolowanie - efekt w JQ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .sekcja1 {
+            background-color: rgb(32, 139, 143);
+            height: 70vh;
+        }
+
+        .sekcja2 {
+            background-color: rgb(10, 34, 10);
+            height: 500px;
+        }
+
+        .sekcja3 {
+            background-color: rgb(167, 46, 106);
+            height: 1290px;
+        }
+
+        .sekcja4 {
+            background-color: rgb(102, 43, 28);
+            height: 150vh;
+        }
+
+        .info {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 70px;
+            width: 100%;
+            box-shadow: 0 0 3px 3px grey;
+            background-color: rgb(200, 200, 200);
+            font-size: 30px;
+            line-height: 70px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="sekcja1"></section>
+    <section class="sekcja2"></section>
+    <section class="sekcja3"></section>
+    <section class="sekcja4"></section>
+    <div class="info">WITAJ NA STRONIE</div>
+
+    <script>
+        //const wysokoscSekcji1 = document.querySelector('.sekcja1').clientHeight;
+        const s1Top = document.querySelector('.sekcja1').offsetTop,
+            s2Top = document.querySelector('.sekcja2').offsetTop,
+            s3Top = document.querySelector('.sekcja3').offsetTop,
+            s4Top = document.querySelector('.sekcja4').offsetTop,
+            info = document.querySelector('.info');
+
+        window.addEventListener('scroll', function () {
+
+            const scrollTop = this.scrollY;
+
+            if (scrollTop < s2Top) {
+                info.textContent = 'SEKCJA 1';
+            } else
+            if (scrollTop < s3Top) {
+                info.textContent = 'SEKCJA 2';
+            } else
+            if (scrollTop < s4Top) {
+                info.textContent = 'SEKCJA 3';
+            } else {
+                info.textContent = 'SEKCJA 4';
+            }
+        });
+    </script>
+</body>
+
+</html>
