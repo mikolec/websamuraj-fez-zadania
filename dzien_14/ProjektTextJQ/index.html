@@ -19,7 +19,6 @@
         .sekcja2 {
             background-color: rgb(10, 34, 10);
             height: 500px;
-
         }
 
         .sekcja3 {
@@ -35,7 +34,7 @@
         .info {
             position: fixed;
             left: 0;
-            top: 0;
+            bottom: 0;
             height: 70px;
             width: 100%;
             box-shadow: 0 0 3px 3px grey;
@@ -63,21 +62,19 @@
             s4Top = $('.sekcja4').offset().top,
             $info = $('.info');
 
-
         $(document).on('scroll', function () {
 
-            let scrollTop = $(this).scrollTop();
+            const scrollTop = $(this).scrollTop();
 
-            if (scrollTop >= s1Top && scrollTop < s2Top) {
+            if (scrollTop < s2Top) {
                 $info.text('SEKCJA 1');
-            }
-            if (scrollTop >= s2Top && scrollTop < s3Top) {
+            } else
+            if (scrollTop < s3Top) {
                 $info.text('SEKCJA 2');
-            }
-            if (scrollTop >= s3Top && scrollTop < s4Top) {
+            } else
+            if (scrollTop < s4Top) {
                 $info.text('SEKCJA 3');
-            }
-            if (scrollTop >= s4Top) {
+            } else {
                 $info.text('SEKCJA 4');
             }
         });
