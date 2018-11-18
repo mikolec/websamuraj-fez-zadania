@@ -14,9 +14,12 @@ html {
     font-family: Oswald, sans-serif;
 }
 
-/* body {
- overflow-x: hidden
-} */
+/* !!! */
+body {
+    overflow-x: hidden;
+    /*ważny jest tylko X! Pionowy jest nam potrzebny!*/
+}
+
 nav {
     height: 10vh;
     background-color: black;
