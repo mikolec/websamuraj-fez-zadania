@@ -34,14 +34,24 @@
         crossorigin="anonymous"></script>
     <script>
         const $doc = $(document);
-        const $dheader = $('header');
+        const $header = $('header');
         const $main = $('main');
 
         $doc.on('scroll', function () {
-            const scrollValue = $(this).scrollTop();
-            const mainTopValue = $main.offset().top;
-            let pValue = (1 - (mainTopValue - scrollValue) / mainTopValue);
-            $dheader.css("filter", "grayscale(" + pValue + ")");
+            const scrollPos = $doc.scrollTop();
+            const sectionOffset = $main.offset().top;
+            const headerHeight = $header.outerHeight();
+
+            if (scrollPos < sectionOffset) {
+
+                let val = scrollPos / headerHeight;
+                let valInv = 1 - val;
+
+                $header.css({
+                    "opacity": valInv,
+                    "filter": 'grayscale(' + 2 * val + ')'
+                });
+            };
         });
     </script>
 </body>
