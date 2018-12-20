@@ -191,15 +191,38 @@
         </div>
     </section>
     <script>
+        //Parametry
+        let activeElement = 0;
+        const timeChange = 4000;
+
+        // Pobieramy 4 elementy na których pracujemy
         const colorImgHtml = document.querySelector('.color'),
             grayImgHtml = document.querySelector('.gray'),
             h1Html = document.querySelector('.member h1'),
             h2Html = document.querySelector('.member h2');
 
+        // Informacje w tablicacho elementach podmienianych
         const colorImages = ["img/s1.png", "img/s2.png", "img/s3.png"],
             grayImages = ["img/s1a.png", "img/s2a.png", "img/s3a.png"],
             names = ["Anna Bougart", "Marek Feliksiak", "Arek Pawłowicz"],
             professions = ["Programistka JS", "UX i UI designer", "Front-end Developer"];
+
+        const changeElement = () => {
+            activeElement++;
+            if (activeElement == 3) {
+                activeElement = 0;
+            }
+
+
+            colorImgHtml.src = colorImages[activeElement];
+            grayImgHtml.src = grayImages[activeElement];
+            h1Html.textContent = names[activeElement];
+            h2Html.textContent = professions[activeElement];
+            // setTimeout(changeElement, timeChange);
+        }
+        // changeElement();
+        setInterval(changeElement, timeChange);
+
     </script>
 </body>
 
